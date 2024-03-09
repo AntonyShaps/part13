@@ -1,7 +1,7 @@
 const { sequelize } = require('../util/db')
 const { Sequelize } = sequelize
 const { Blog } = require('../models')
-
+const { Session, User } = require('../models')
 const router = require('express').Router()
 
 

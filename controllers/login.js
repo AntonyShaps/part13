@@ -27,6 +27,7 @@ router.post('/', async (request, response) => {
   }
 
   const token = jwt.sign(userForToken, SECRET)
+  await Session.create({token, userId: user.id})
 
   response
     .status(200)

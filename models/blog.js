@@ -30,6 +30,9 @@ Blog.init({
     type: DataTypes.INTEGER
   }
 }, {
+  defaultScope: {
+    attributes: {exclude: ['createdAt', 'updatedAt']}
+  },
   sequelize,
   underscored: true,
   timestamps: false,
